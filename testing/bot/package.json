@@ -1,0 +1,12 @@
+{
+  "name": "example-bot",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "WilsontheWolf (https://shorty.systems/)",
+  "license": "Unlicense",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@projectdysnomia/dysnomia": "^0.1.3"
+  }
+}

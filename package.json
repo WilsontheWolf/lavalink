@@ -1,0 +1,12 @@
+{
+  "name": "@wilsonthewolf/lavalink",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "license": "Unlicense",
+  "author": "WilsontheWolf (https://shorty.systems/)",
+  "description": "A simple wrapper for the Lavalink client.",
+  "type": "module",
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}
