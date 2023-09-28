@@ -90,7 +90,6 @@ class Instance {
     }
 
     async join(guildID, channelID = null, { deaf = false, mute = false } = {}) {
-        console.log('Stack Trace', new Error('Stack Trace'));
         if (!guildID) throw new Error("No guild ID provided");
         if (this.#guildChannels.get(guildID) !== channelID) {
             this.#voiceStates.delete(guildID);
@@ -166,8 +165,6 @@ class Instance {
             sessionId: this.#voiceStates.get(guildID).session_id,
         }
 
-        console.log(data.voice)
-
         clearTimeout(this.#voiceUpdateTimeout);
         const res = await this.fetch(`/sessions/${this.sessionID}/players/${guildID}${queryParam}`, {
             method: 'PATCH',
@@ -183,7 +180,6 @@ class Instance {
     }
 
     async destroyPlayer(guildID) {
-        console.log('Stack Trace', new Error('Stack Trace'));
         if (!guildID) throw new Error("No guild ID provided");
         const res = await this.fetch(`/sessions/${this.sessionID}/players/${guildID}`, {
             method: 'DELETE',

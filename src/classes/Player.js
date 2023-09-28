@@ -139,7 +139,6 @@ class Player extends EventEmitter {
                 break;
             }
             case 'event': {
-                console.log('Player WS Event', message)
                 switch (message.type) {
                     case 'TrackStartEvent': {
                         this.#data.track = message.track;

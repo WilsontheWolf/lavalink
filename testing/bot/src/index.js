@@ -114,7 +114,6 @@ client.on('messageCreate', async (msg) => {
             const guildID = msg.guildID;
             const channelID = msg.member?.voiceState.channelID;
             await instance.join(guildID, channelID, { deaf: true });
-            console.log(new Error('Stack Trace'))
             break
         }
         case 'begone': {
